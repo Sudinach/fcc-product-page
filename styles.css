@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Basic&family=IM+Fell+Double+Pica+SC&family=Jost&family=Pathway+Gothic+One&family=Patua+One&family=Poiret+One&family=Varela&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+@media screen and (max-width: 300px){
+  
+  .top-bar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(270deg, #014871, #a0ebcf);
+  }
+  
+  
+  .company img{
+      width: 24px;
+      height: 24px;
+  }
+
+  section{
+    display: grid;
+    grid-template-areas: "img span";
+    justify-content: center;
+  }
+
+  nav li{
+    list-style-type: none;
+
+
+  }
+}
+
+@media screen and (max-width: 600px;){
+
+  .company img{
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+  }
+  
+  section{
+    text-align: center;
+  }
+}
+
+
+.top-bar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px;
+  background: linear-gradient(35deg, #6fc3f7, #1813a2);
+}
+
+.company{
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.company img{
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+span{
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding-left: 10px;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px;
+}
