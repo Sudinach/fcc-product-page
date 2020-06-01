@@ -1,72 +1,172 @@
-@import url("https://fonts.googleapis.com/css2?family=Basic&family=IM+Fell+Double+Pica+SC&family=Jost&family=Pathway+Gothic+One&family=Patua+One&family=Poiret+One&family=Varela&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;600&family=Palanquin:wght@700&family=DM+Sans:wght@700&family=Josefin+Sans:wght@300&family=Spartan:wght@700;800&family=Josefin+Slab:wght@600;700&family=Jost:wght@400;500;600&family=Karla:wght@700&display=swap');
+
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-a {
   text-decoration: none;
   color: #000000;
 }
 
-@media screen and (max-width: 300px){
-  
+
+body{
+  font-family: 'Jost', sans-serif;
+}
+
+
+a{
+  color: #e6e6e6;
+}
+
+
+@media screen and (max-width: 600px){
+
+
   .top-bar{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(270deg, #014871, #a0ebcf);
-  }
-  
-  
-  .company img{
-      width: 24px;
-      height: 24px;
-  }
-
-  section{
-    display: grid;
-    grid-template-areas: "img span";
+    flex-direction: column;
     justify-content: center;
+    height: 120px;
   }
 
-  nav li{
-    list-style-type: none;
-
-
+  .company{
+    margin: auto;
   }
-}
 
-@media screen and (max-width: 600px;){
+  .motto{
+    width: 100%;
+    font-size: 40px;
+    line-height: 60px;
+    bottom: 10%;  
+  }
 
-  .company img{
-    width: 30px;
-    height: 30px;
-    padding-right: 5px;
+  .detail{
+    top: 90%;
+    width: 100%;
+  }
+
+  .showcase img{
+    width: 100%;
   }
   
-  section{
-    text-align: center;
+
+  .product-services{
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .sub-head, .pricing{
+    width: 80%;
+    margin: 30px auto;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+
+  .motto{
+    width: 400px;
+    font-size: 40px;
+    line-height: 60px;
+    margin-left: 8%;
+
+  }
+
+  .detail{
+    top: 60%;
+    width: 450px;
+    margin-left: 6%;
+  }
+
+  .showcase img{
+    width: 500px;
+  }
+
+  .heading h2{
+    font-size: 30px;
+    margin: 10px;
+  }
+
+  .heading p{
+    margin: 10px;
+    font-size: 18px;
+  }
+
+  .product-services{
+    padding: 0;
+  }
+
+  .sub-head{
+    width: 29%;
+    font-size: 16px;
+    min-height: 480px;
+    font-size: 18px;
+    margin: 0 20px;
+
+  }
+
+  .product-price{
+    font-size: 22px;
+  }
+
+  .product-detail{
+    font-size: 18px;
+  }
+
+  .pricing{
+    min-height: 350px;
+  }
+
+  .price{
+    font-size: 30px;
+  }
+  
+  .contact p{
+    line-height: 30px;
   }
 }
 
 
-.top-bar{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 20px;
-  background: linear-gradient(35deg, #6fc3f7, #1813a2);
+@media screen and (max-width: 1183px) {
+
+  .motto{
+    width: 500px;
+    font-size: 50px;
+    margin-left: 5%;
+    line-height: 70px;
+    margin-top: 20px;
+
+  }
+
+  .detail{
+    width: 500px;
+    font-size: 22px;
+    top: 63%;
+  }
+
+  .showcase img{
+    margin-left: auto;
+    width: 500px;
+  }
+
+  .sub-head{
+    width: 28%;
+  }
+
+  .pricing{
+    min-height: 350px;
+  }
+
 }
+
+
 
 .company{
   display: flex;
   align-items: center;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .company img{
@@ -76,21 +176,264 @@ a {
 }
 
 span{
-  font-family: 'Poiret One', sans-serif;
-  font-weight: 800;
+  font-family: 'Jost', sans-serif;
+  color: #e6e6e6;
+  font-weight: 500;
   font-size: 20px;
   letter-spacing: 3px;
   padding-left: 10px;
 }
 
-header{
+.top-bar{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  padding: 20px 40px;
+  background: linear-gradient(35deg, #6fc3f7, #1813a2);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 1;
 }
 
 nav ul li{
   list-style: none;
   display: inline-block;
-  margin-right: 20px;
+  margin-right:20px;
+  font-family: 'Jost', sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+li a:active{
+  border-bottom: 2px solid darkgray;
+}
+
+button{
+  color: #1813a2;
+  background-color:  #ffffff;
+  border-radius: 20px;
+  height: 30px;
+  width: 80px;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.showcase{
+  position: relative;
+  background: linear-gradient(35deg, #6fc3f7, #1813a2);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.showcase img{
+  margin-left: auto ;
+  width: 700px;
+}
+
+
+.motto{
+  position: absolute;
+  left: 0;
+  width: 700px;
+  font-family: 'Palanquin Dark',sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #efefef;
+  margin-left: 3.5%;
+  padding: 30px;
+  line-height: 90px;
+}
+
+.detail{
+  position: absolute;
+  left: 0;
+  width: 680px;
+  font-family: 'Palanquin', sans-serif;
+  font-size: 24px;
+  padding: 30px;
+  margin-left: 5%;
+  top: 65%;
+  color: #efefef;
+  font-weight: 700;
+}
+
+
+.heading h2{
+  text-align: center;
+  margin: 20px;
+  font-family: 'Jost' , sans-serif;
+  font-size: 40px;
+}
+
+
+.heading p{
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+
+.product-services{
+  display: flex;
+  width: 83%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+  padding: 20px 0;
+}
+
+
+.sub-head, .pricing{
+  width: 27%;
+  text-align: center;
+  padding: 30px 0;
+  margin: 20px;
+  background: linear-gradient(45deg, #6fc3f7, #0da1ce);
+  min-height: 400px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 4px rgba(84, 210, 210, 0.7);
+}
+
+
+.product-price{
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.product-detail{
+  padding: 0 20px;
+  color: #efefef;
+}
+
+
+.product-services img{
+  width: 100px;
+  height: 100px;
+}
+
+.price{
+  font-family: 'Palanquin Dark',sans-serif;
+  font-size: 40px;
+  background: linear-gradient(105deg, #f12711, #f5af19);
+  margin: 30px 0 50px;
+}
+
+.level{
+  font-size: 20px;
+  color: #efefef;
+  margin-top: 80px;
+}
+
+.work h2{
+  text-align: center;
+  font-size: 40px;
+  margin: 20px 0 40px;
+}
+
+.work{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+.newsletter{
+  width: 50%;
+  margin: 40px auto;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #1bf3ab;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.newsletter p{
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+label{
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+#email{
+  height: 40px;
+  border-radius: 4px;
+  border: 0;
+  padding: 0 20px;
+}
+
+
+#submit{
+  background: #171d4b;
+  border: 0;
+  border-radius: 3px;
+  height: 40px;
+  width: 80px;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 20px;
+  font-family: 'Jost', sans-serif;
+}
+
+
+#submit:hover{
+  background: linear-gradient(105deg, #f12711, #f5af19);
+  cursor: pointer;
+}
+
+
+.contact{
+  display: flex;
+  margin: 40px auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact p{
+  color: #232629;
+  line-height: 40px;
+}
+
+
+.contact-head{
+  margin: 0 50px;
+}
+
+
+i{
+  margin-right: 10px;
+}
+
+
+
+footer{
+  bottom: 0;
+  background: linear-gradient(105deg, #1bf3ab, #072448);
+  height: 60px;
+  text-align: center;
+  font-size: 18px;
+}
+
+footer p{
+  padding-top: 20px;
 }
